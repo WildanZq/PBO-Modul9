@@ -27,16 +27,147 @@ public class PemilihanDokter extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(313, 379));
         getContentPane().setLayout(null);
 
         jLabel1.setText("Pemilihan Dokter");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(100, 20, 110, 14);
 
+        jLabel2.setText("Pilih dokter");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(30, 70, 80, 14);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--- Pilih Satu ---", "DR. Farras Yassar", "DR. Anisa Putri", "DR. Harun Fajar" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox1);
+        jComboBox1.setBounds(150, 70, 110, 20);
+
+        jLabel3.setText("Identitas");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(30, 110, 80, 14);
+
+        jLabel4.setText("Nama");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(40, 130, 60, 14);
+
+        jLabel5.setText("Alamat");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(40, 150, 80, 14);
+
+        jLabel6.setText("Umur");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(40, 170, 40, 14);
+
+        jLabel7.setText("Jenis Kelamin");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(40, 190, 90, 14);
+
+        jLabel8.setText("Golongan Darah");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(40, 210, 100, 14);
+
+        jLabel9.setText("Status");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(40, 230, 70, 14);
+
+        jLabel10.setText("Kewarganegaraan");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(40, 250, 120, 14);
+
+        jLabel11.setText("Waktu Praktek");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(40, 270, 120, 14);
+
+        jLabel12.setText("Dokter Spesialis");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(40, 290, 110, 14);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(20, 100, 260, 10);
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(150, 130, 110, 20);
+        getContentPane().add(jTextField2);
+        jTextField2.setBounds(150, 150, 110, 20);
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(150, 170, 110, 20);
+        getContentPane().add(jTextField4);
+        jTextField4.setBounds(150, 190, 110, 20);
+        getContentPane().add(jTextField5);
+        jTextField5.setBounds(150, 210, 110, 20);
+        getContentPane().add(jTextField6);
+        jTextField6.setBounds(150, 230, 110, 20);
+        getContentPane().add(jTextField7);
+        jTextField7.setBounds(150, 250, 110, 20);
+        getContentPane().add(jTextField8);
+        jTextField8.setBounds(150, 270, 110, 20);
+        getContentPane().add(jTextField9);
+        jTextField9.setBounds(150, 290, 110, 20);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        if(jComboBox1.getSelectedItem().equals("DR. Farras Yassar")){
+            jTextField1.setText("DR. Farras Yassar ");
+            jTextField2.setText("Jl. Surabaya 16, Malang");
+            jTextField3.setText("20 Tahun");
+            jTextField4.setText("Laki-Laki");
+            jTextField5.setText("A");
+            jTextField6.setText("Belum Menikah ");
+            jTextField7.setText("Indonesia");
+            jTextField9.setText("Dokter Umum");
+            jTextField8.setText(" Pagi (07.00-15.00)");
+        } else if(jComboBox1.getSelectedItem().equals("DR. Anisa Putri")){
+            jTextField1.setText("DR. Anisa Putri");
+            jTextField2.setText("Jl. Veteran 3, Malang");
+            jTextField3.setText("20 Tahun");
+            jTextField4.setText("Perempuan");
+            jTextField5.setText("O");
+            jTextField6.setText("Belum Menikah ");
+            jTextField7.setText("Indonesia");
+            jTextField9.setText("Dokter Gigi");
+            jTextField8.setText(" Malam (22.00-06.00)");
+        } else if(jComboBox1.getSelectedItem().equals("DR. Harun Fajar")){
+            jTextField1.setText("DR. Harun Fajar");
+            jTextField2.setText("Jl. Bandung 9, Malang");
+            jTextField3.setText("20 Tahun");
+            jTextField4.setText("Laki-Laki");
+            jTextField5.setText("B");
+            jTextField6.setText("Belum Menikah ");
+            jTextField7.setText("Indonesia");
+            jTextField9.setText("Dokter Gizi");
+            jTextField8.setText(" Malam (22.00-06.00)");
+        }
+
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -74,6 +205,28 @@ public class PemilihanDokter extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
